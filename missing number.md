@@ -1,5 +1,6 @@
 268. missing number
 
+```
 public class Solution {
     public int missingNumber(int[] nums) {
          if(nums == null || nums.length == 0){
@@ -15,3 +16,4 @@ public class Solution {
         return result;
     }
 }
+```
