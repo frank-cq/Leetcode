@@ -9,7 +9,7 @@ public class Solution {
         s = s.toUpperCase();
         int len = s.length(), pre = 0, sum = 0 , countOfContinSameNum = 0;
         boolean isMinus = false;
-	// 从右往左扫描，比左邻大的加入总和中，比左邻小的从总和中减掉
+	// 从右往左扫描，比右邻大的加入总和中，比右邻小的从总和中减掉
         for(int i=len-1; i>=0; i--){
             int cur = romanChar2Int(s.charAt(i));
             if(cur > pre){
@@ -17,7 +17,7 @@ public class Solution {
                 isMinus = false;
                 countOfContinSameNum = 0;
             }
-	    // 特殊情况，当前值等于左邻的值
+	    // 特殊情况，当前值等于右邻的值
 	    // 若上一次运算为减，则当前应该也是减；若上一次为加，则当前也应该为加。
 	    // 当某个数字连续出现3次后，下一相同的数字应该加入总和中
             else if(cur == pre){
