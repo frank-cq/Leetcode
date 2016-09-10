@@ -1,2 +1,2 @@
 # Leetcode
-Leetcode学习
+Leetcode 学习
